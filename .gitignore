@@ -1,0 +1,7 @@
+## Image files
+*.tar
+
+## Installer
+*.exe
+*.msi
+*.msixbundle

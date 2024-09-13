@@ -1,0 +1,14 @@
+﻿version: '3.8'
+services:
+  db2:
+    image: wiseda/db2:11.5.8.0
+    container_name: db2
+    environment:
+      - DB2INST1_PASSWORD=wise1012
+      - LICENSE=accept
+      - DBNAME=testdb
+    ports:
+      - "50000:50000"
+    volumes:
+      - /path/to/datafile # 데이터 파일을 호스트에 저장 (로컬:가상)
+    privileged: true

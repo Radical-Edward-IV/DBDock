@@ -1,0 +1,17 @@
+﻿version: '3.8'
+services:
+  mariadb:
+    image: mariadb:10.11.9
+    container_name: mariadb10
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: wise1012
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: wiseda
+      MYSQL_PASSWORD: wise1012
+    volumes:
+      - /path/to/datafile   # 데이터 파일을 호스트에 저장 (로컬:가상)
+#      - /path/to/configfile # 설정 파일을 호스트에 저장   (로컬:가상)
+    privileged: true
+

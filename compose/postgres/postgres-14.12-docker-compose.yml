@@ -1,0 +1,15 @@
+﻿version: '3.8'
+services:
+  postgres:
+    image: postgres:14.12
+    container_name: postgres14
+    environment:
+      - POSTGRES_USER=wiseda
+      - POSTGRES_PASSWORD=wise1012
+      - POSTGRES_DB=testdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - /path/to/datafile # 데이터 파일을 호스트에 저장 (로컬:가상)
+    privileged: true
+

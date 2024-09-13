@@ -1,0 +1,14 @@
+﻿version: '3.8'
+services:
+  oracle-db:
+    image: wiseda/oracle:19.3c
+    container_name: oracle19c
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_SID: ORCL
+      ORACLE_PWD: wise1012
+      ORACLE_CHARACTERSET: AL32UTF8
+    volumes:
+      - /path/to/datafile # 데이터 파일을 호스트에 저장 (로컬:가상)
+    privileged: true
